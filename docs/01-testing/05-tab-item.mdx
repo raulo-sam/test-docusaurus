@@ -1,0 +1,35 @@
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import { name } from "./tab.js";
+
+export const Thing = ({ fruta }) => (
+    <>
+        <Tabs>
+            <TabItem value="apple" label="Apple" default>
+                This is an apple 🍎 {fruta}
+            </TabItem>
+            <TabItem value="orange" label="Orange">
+                This is an orange 🍊{name}
+            </TabItem>
+            <TabItem value="banana" label="Banana">
+                This is a banana 🍌
+            </TabItem>
+        </Tabs>
+    </>
+);
+
+export const Thong = () => (
+    <>
+        <div>
+            {name.map((n) => (
+                <div value={n} label={n}>
+                    This is an {n} 🍎
+                </div>
+            ))}
+        </div>
+    </>
+);
+
+{/* # Hello <Thing/> */}
+
+{/* # Hello <Thong/> */}

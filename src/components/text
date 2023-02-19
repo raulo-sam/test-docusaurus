@@ -1,0 +1,33 @@
+wn dentro de una etiqueta JSX nunca funciona:
+
+Problema
+Solución alterna
+<span style={{color: 'red'}}>**Bold doesn't work**</span>
+
+**La negrita no funciona**
+El texto inmediatamente debajo de una etiqueta JSX se verá como texto JSX:
+
+Problema
+Solución alterna
+<div style={{color: 'red'}}>
+**Bold still doesn't work**
+</div>
+
+**La negrita sigue sin funcionar**
+El texto de Markdown con una sangría de cuatro espacios se verá como un bloque de código:
+
+Problema
+Solución alterna
+<div style={{color: 'red'}}>
+
+    You may think I'm just some text...
+
+</div>
+
+You may think I'm just some text...
+
+Importación de 
+No solo puede importar un archivo que contenga una definición de componente, sino también importar cualquier archivo de código como texto sin procesar y luego insertarlo en un bloque de código, gracias a Webpack raw-loader . Para usarlo raw-loader, primero debe instalarlo en su proyecto:
+
+npm
+Hilo

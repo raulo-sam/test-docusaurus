@@ -1,0 +1,40 @@
+---
+id: react test
+raul: el mas guapo del mundo mundial
+elMasListo: tambien
+---
+import MyComponentSource from '!!raw-loader!@site/src/components/text';
+
+<highlight color="#25c2a0">Docusaurus green test</highlight>
+
+/* no funciona */
+<span style={{color: 'red'}}>Highlighted text</span> but afterwards _Markdown_ **doesn't work**
+
+
+import CodeBlock from '@theme/CodeBlock';
+
+<CodeBlock showLineNumbers language="markdown">{MyComponentSource}</CodeBlock>
+
+
+
+<span>Hello {props.testingProps}</span>
+
+This is text some content from `_markdown-partial-example.mdx`.
+
+
+
+
+import TOCInline from '@theme/TOCInline';
+
+The table of contents for this page, serialized:
+
+<CodeBlock className="language-json">{JSON.stringify(toc, null, 2)}</CodeBlock>
+
+The front matter of this page:
+
+<ul>
+  {Object.entries(frontMatter).map(([key, value]) => <li key={key}><b>{key}</b>: {value}</li>)}
+</ul>
+
+<p>The title of this page is: <b>{contentTitle}</b></p>
+
